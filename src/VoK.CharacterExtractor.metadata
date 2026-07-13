@@ -1,0 +1,8 @@
+{
+  "PluginName": "VoK.CharacterExtractor",
+  "Version": "0.1.0.0",
+  "ProductInfoUrl": "",
+  "UpdateSource": "",
+  "MinimumFrameworkVersion": "4.2.0.0",
+  "AllowedVersions": []
+}

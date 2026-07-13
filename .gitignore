@@ -1,0 +1,16 @@
+# Character dumps contain your character/party details — keep them local.
+# Delete this line if you want to commit a sample dump.
+extracts/
+
+# Build output
+src/bin/
+src/obj/
+*.pdb
+
+# Update-time backups (ddobuilder-sync)
+*.bak
+*.bak2
+
+# Tooling
+node_modules/
+__pycache__/

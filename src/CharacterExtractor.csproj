@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>VoK.CharacterExtractor</AssemblyName>
+    <RootNamespace>VoK.CharacterExtractor</RootNamespace>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <!--
+    Dungeon Helper installs per-user under %AppData%\Dungeon Helper.
+    Override DungeonHelperDir on the command line if your install lives elsewhere:
+      dotnet build -p:DungeonHelperDir="D:\Path\To\Dungeon Helper\"
+  -->
+  <PropertyGroup>
+    <DungeonHelperDir Condition="'$(DungeonHelperDir)' == ''">$(AppData)\Dungeon Helper\</DungeonHelperDir>
+    <VokSdkPath>$(DungeonHelperDir)VoK.Sdk.dll</VokSdkPath>
+  </PropertyGroup>
+
+  <Target Name="VerifySdkExists" BeforeTargets="ResolveAssemblyReferences">
+    <Error Text="VoK.Sdk.dll not found at '$(VokSdkPath)'. Set DungeonHelperDir to your install folder via -p:DungeonHelperDir='C:\full\path\to\Dungeon Helper\' (trailing backslash required)."
+           Condition="!Exists('$(VokSdkPath)')" />
+  </Target>
+
+  <ItemGroup>
+    <Reference Include="VoK.Sdk">
+      <HintPath>$(VokSdkPath)</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3">
+      <Private>false</Private>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="VoK.CharacterExtractor.metadata">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

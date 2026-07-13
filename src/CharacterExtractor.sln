@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.5.11801.241 oobstable
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterExtractor", "CharacterExtractor.csproj", "{48175BBC-2D3A-32F7-BF9A-9882F9358F87}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48175BBC-2D3A-32F7-BF9A-9882F9358F87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48175BBC-2D3A-32F7-BF9A-9882F9358F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48175BBC-2D3A-32F7-BF9A-9882F9358F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48175BBC-2D3A-32F7-BF9A-9882F9358F87}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40FF99A0-5946-4B16-A4E7-3109DB0A5F7E}
+	EndGlobalSection
+EndGlobal
