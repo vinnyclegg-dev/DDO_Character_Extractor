@@ -23,8 +23,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 DATA_DIR = Path(os.environ.get('DDOB_DATA_DIR',
-    '/sessions/funny-charming-gauss/mnt/local_9f0aaaf5-4875-49ae-838d-5e88b61717cf--outputs/'
-    '.ddobuilder_cache/DDOBuilderV2_2.0.0.79/DataFiles'))
+    str(Path.home() / 'Downloads' / 'DDOBuilderV2_2.0.0.79' / 'DataFiles')))
 OUT_FILE = Path(os.environ.get('GAMEDATA_OUT',
     str(Path(__file__).resolve().parent / 'ddo_game_data.json')))
 

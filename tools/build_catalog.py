@@ -27,7 +27,7 @@ from pathlib import Path
 # catalog path.
 DATA_DIR = Path(os.environ.get(
     'DDOB_DATA_DIR',
-    '/sessions/modest-lucid-wright/mnt/Vinny/Downloads/DDOBuilderV2_2.0.0.79/DataFiles',
+    str(Path.home() / 'Downloads' / 'DDOBuilderV2_2.0.0.79' / 'DataFiles'),
 ))
 OUT_FILE = Path(os.environ.get(
     'DDOB_OUT_FILE',
